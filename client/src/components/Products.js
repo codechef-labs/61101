@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Products() {
     const [products, setProducts] = useState([]);
-    const [setError] = useState(null);
+    const [, setError] = useState(null);
 
     useEffect(() => {
         async function fetchProducts() {
