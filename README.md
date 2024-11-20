@@ -145,8 +145,7 @@ python3 -m venv ./
 
 ./bin/pipenv install
 ./bin/pipenv shell
-
-pip install flask_bcrypt typing_extensions
+./bin/pipenv run pip install flask_bcrypt typing_extensions
 
 ```
 
