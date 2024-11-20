@@ -4,7 +4,7 @@
 
 Disclaimer: Please note that the Mont Luxe Watch Company E-Commerce Platform is a conceptual project created for educational purposes. This store, including its products and services, does not exist in reality and has been developed as a part of a learning endeavor in full-stack web application development.
 
-The Mont Luxe Watch Company E-Commerce Platform represents a sophisticated elegance in web application development, designed to elegantly showcase and facilitate the sale of luxury timepieces. Technologies used and learned are below, this flows up to the checkout page has CRUD on Users with bcrypt on the hashed passwords utilizing frontend and backend full stack Python, Flask, SQlite3, SQL Alchemy, React JS, and Tailwind CSS. 
+The Mont Luxe Watch Company E-Commerce Platform represents a sophisticated elegance in web application development, designed to elegantly showcase and facilitate the sale of luxury timepieces. Technologies used and learned are below, this flows up to the checkout page has CRUD on Users with bcrypt on the hashed passwords utilizing frontend and backend full stack Python, Flask, SQlite3, SQL Alchemy, React JS, and Tailwind CSS.
 
 Key Technologies and Features:
 1. **Flask Backend**: Utilizes the Flask framework for robust server-side operations, ensuring efficient handling of HTTP requests, data processing, and API interactions.
@@ -139,8 +139,15 @@ Before initializing the database, ensure you have a `.env` file set up in your `
 ### Installing Dependencies
 After cloning the project, install backend dependencies and activate the virtual environment:
 ```console
-pipenv install
-pipenv shell
+python3 -m venv ./
+./bin/pip install pipenv
+./bin/pipenv --python ./bin/python
+
+./bin/pipenv install
+./bin/pipenv shell
+
+pip install flask_bcrypt typing_extensions
+
 ```
 
 ### Running the Flask API
@@ -169,7 +176,7 @@ After setting up your `.env` file and installing dependencies, you can initializ
 
 ```sh
 export FLASK_APP=app.py
-export FLASK_RUN_PORT=5555
+export FLASK_RUN_PORT=8080
 
 { flask db init && echo "DB init successful"; } || echo "DB init failed, continuing..."
 { flask db migrate -m "initial migration" && echo "DB migrate successful"; } || echo "DB migrate failed, continuing..."
