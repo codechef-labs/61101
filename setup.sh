@@ -9,7 +9,7 @@ echo "Installing pipenv..."
 pip install pipenv
 
 echo "Configuring pipenv with local Python..."
-pipenv --python python
+# pipenv --python python
 
 echo "Setting up pipenv environment..."
 pipenv install
